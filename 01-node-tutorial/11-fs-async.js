@@ -1,6 +1,10 @@
+//// Built-in modules (os, path, fs, http)
+//// fs module, async
 const { readFile, writeFile } = require('fs')
 
-console.log('start')
+//// readFile(path, encoding, callback)
+//// write(path, contents, callback)
+//// below scenario call callback hell
 readFile('./content/first.txt', 'utf8', (err, result) => {
   if (err) {
     console.log(err)
@@ -26,4 +30,3 @@ readFile('./content/first.txt', 'utf8', (err, result) => {
     )
   })
 })
-console.log('starting next task')

@@ -5,7 +5,7 @@ const server = http.createServer((req, res) => {
     res.end('Home Page')
   }
   if (req.url === '/about') {
-    // blocking code
+    //// blocking code
     for (let i = 0; i < 1000; i++) {
       for (let j = 0; j < 1000; j++) {
         console.log(`${i} ${j}`)
@@ -19,3 +19,5 @@ const server = http.createServer((req, res) => {
 server.listen(5000, () => {
   console.log('Server listening on port : 5000....')
 })
+
+//// when access about page, then access other page, need wait for loop in about page complete, then show message

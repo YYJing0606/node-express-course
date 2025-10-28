@@ -3,4 +3,5 @@ const person = {
   name: 'bob',
 }
 
+//// export variable and rename it
 module.exports.singlePerson = person
